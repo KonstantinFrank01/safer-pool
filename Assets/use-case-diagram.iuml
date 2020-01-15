@@ -10,3 +10,4 @@ rectangle NETUNUS {
     (Pool überwachen) -- PoolSaver
     (Überwachung des Microcontrollers) -- PoolSaver
 }
+@enduml
