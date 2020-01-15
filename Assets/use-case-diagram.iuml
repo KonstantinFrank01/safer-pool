@@ -1,5 +1,12 @@
 @startuml
-Class09 -- Class10
-Class10 -- Class11
-Aufsichtsperson -- Goethe
+left to right direction
+actor supervisor
+actor PoolSaver
+rectangle pool guard {
+    supervisor -- (go swimming)
+    supervisor -- (know that the child is safe)
+    (alarm the supervisor) -- PoolSaver
+    (guarding the pool) -- PoolSaver
+    (guarding the micro controller) -- PoolSaver
+}
 @enduml
