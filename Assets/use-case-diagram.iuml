@@ -2,7 +2,7 @@
 left to right direction
 actor supervisor
 actor PoolSaver
-rectangle poolguard {
+rectangle pool-guard {
     supervisor -- (go swimming)
     supervisor -- (know that the child is safe)
     (alarm the supervisor) -- PoolSaver
