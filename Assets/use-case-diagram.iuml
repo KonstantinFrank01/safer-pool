@@ -1,4 +1,5 @@
 @startuml
 Class09 -- Class10
 Class10 -- Class11
+Aufsichtsperson -- Goethe
 @enduml
