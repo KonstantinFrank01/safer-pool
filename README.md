@@ -20,4 +20,4 @@ Verbrauch auszuschließen, da zu viel Zusatz-Material benötigt werden würde.
 
 ## Use-Case-Diagramm
 
-![Use-Case-Diagramm](https://raw.githubusercontent.com/KonstantinFrank01/safer-pool/master/Assets/use-case-diagram.png)
+![Use-Case-Diagramm](https://raw.githubusercontent.com/KonstantinFrank01/safer-pool/master/Assets/Use-Case-Diagramm.png)
