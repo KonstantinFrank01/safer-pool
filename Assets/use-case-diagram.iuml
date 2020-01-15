@@ -1,13 +1,4 @@
 @startuml
-left to right direction
-skinparam packageStyle rectangle
-actor Aufsichtsperson
-actor PoolSaver
-rectangle NETUNUS {
-    Aufsichtsperson -- (schwimmen gehen)
-    Aufsichtsperson -- (Kind in Sicherheit wissen)
-    (Aufsichtsperson alarmieren) -- PoolSaver
-    (Pool überwachen) -- PoolSaver
-    (Überwachung des Microcontrollers) -- PoolSaver
-}
+Class09 -- Class10
+Class10 -- Class11
 @enduml
