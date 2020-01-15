@@ -13,3 +13,11 @@ ausfallsicher und einfach zu installieren sein. Wünschenswert wäre, wenn die 
 möglichst nachhaltig wäre, daher wollen wir auf klassische Batterien verzichten und stattdessen
 wiederaufladbare Batterien verwenden. Ein Betrieb durch Solarstrom ist bei diesem geringen
 Verbrauch auszuschließen, da zu viel Zusatz-Material benötigt werden würde.
+
+## Systemarchitektur
+
+![Systemarchitektur](https://raw.githubusercontent.com/KonstantinFrank01/safer-pool/master/Assets/systemarchitekturNetunus.jpg)
+
+## Use-Case-Diagramm
+
+![Use-Case-Diagramm](https://raw.githubusercontent.com/KonstantinFrank01/safer-pool/master/Assets/use-case-diagram.png)
