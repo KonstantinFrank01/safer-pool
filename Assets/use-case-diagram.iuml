@@ -1,12 +1,12 @@
 @startuml
 left to right direction
-actor supervisor
+actor Aufsichtsperson
 actor PoolSaver
-rectangle pool-guard {
-    supervisor -- (go swimming)
-    supervisor -- (know that the child is safe)
-    (alarm the supervisor) -- PoolSaver
-    (guarding the pool) -- PoolSaver
-    (guarding the micro controller) -- PoolSaver
+rectangle NETUNUS {
+    Aufsichtsperson -- (schwimmen gehen)
+    Aufsichtsperson -- (Kind in Sicherheit wissen)
+    (Aufsichtsperson alarmieren) -- PoolSaver
+    (Pool überwachen) -- PoolSaver
+    (Überwachung des Microcontrollers) -- PoolSaver
 }
 @enduml
