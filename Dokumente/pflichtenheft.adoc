@@ -65,7 +65,7 @@ benötigt werden würde.
 
 === 4.1 Anwendungsfälle
 
-image::http://www.plantuml.com/plantuml/proxy?chache=n0&src=https://raw.githubusercontent.com/KonstantinFrank01/safer-pool/master/Assets/use-case-diagram.iuml[]
+image::http://www.plantuml.com/plantuml/proxy?chache=n0&src=https://raw.githubusercontent.com/KonstantinFrank01/safer-pool/KonstantinFrank01-patch-1/Assets/use-case-diagram.iuml[]
 
 <<<
 
