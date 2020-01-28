@@ -32,27 +32,20 @@ jedoch kann aktuell mit einer höheren Zahl gerechnet werden da die Zahl stetig 
 Viele Familien genießen ihre heißen Sommertage gemeinsam am Pool und erfreuen sich an der Abkühlung im Nass.
 
 == 2. Ist-Situation
-Die Aufsichtspersonen der spielenden Kinder können jedoch aus verschiedenen Gründen
-unaufmerksam sein und die Kinder sich selbst überlassen. Schon öfter ist es vorgekommen,
-dass ein Baby bzw. ein Kleinkind unbeaufsichtigt in einen Pool gefallen und ertrunken ist, oder bleibende
-Schäden davon getragen hat.
-Selbiges kann natürlich auch Haustieren passieren.
-Zur Vermeidung dieser Unfälle gibt es schon verschiedene Lösungsansätze. Zum Beispiel ein Armband, welches bei Kontakt mit Wasser
-mit Hilfe eines akustischen Warnsignals auf den Umstand aufmerksam macht. Es kann auch einfach ein
-Zaun um den Pool aufgestellt werden.
+Es ist fast unmöglich Kinder lückenlos zu beaufsichtigen, da einen jeder noch so kleine Umstand ablenken kann.
+Beispiele für solche Ablenkungen wären ein Anruf oder auch ein kurzer Gang ins Haus um etwas zu holen.
 
 == 3. Problem
-Diese Bänder können jedoch nur dann helfen, wenn sie auch wirklich angelegt sind. Schließlich kann es passieren, dass auf das Armband
-vergessen wurde oder ein Kind zu Besuch ist, dass kein solches Band besitzt.
+Auch wenn die Zeit in der die Kinder unbeaufsichtigt sind noch so kurz ist kann es dadurch sehr schnell zu
+Badeunfällen kommen.
 
 == 4. Aufgabenstellung
-Es ist ein System zu entwickeln mit deren Hilfe eine solche Tragödie vermieden werden kann.
-Angenommen ein Kleinkind fällt unbeaufsichtigt in das Wasser so erkennt dieses System, dass Wellen
-erzeugt wurden und gibt ein audiovisuelles Warnsignal? von sich um die Aufsichtsperson darauf aufmerksam zu machen,
-damit das Kind so schnell wie möglich gerettet werden kann. Dieses System kann je nach belieben auch mit den Bändern kombiniert werden.
-Es ist aber keine Integration in das Bänder-System geplant.
+Es ist ein System zu entwickeln, dass Objekte detektiert die in den Pool fallen. Das müssen in erster Linie nicht
+Kleinkinder sein sondern können auch Haustiere oder ein Ball mit dem das Kind gerade spielt sein.
+Sobald solch eine Detektion durch das System erfolgt soll sowohl ein auditivies wie auch visuelles Signal abgegeben
+werden.
 
-Man sollte die Applikation einfach für eine gewisse Zeitdauer deaktivieren können, wenn man
+Man sollte die Detektion einfach für eine gewisse Zeitdauer deaktivieren können, wenn man
 bewusst schwimmen gehen möchte. Nebenbedingungen wie ein Stromausfall, Sensorausfall etc. sollen
 ebenso erkannt werden.
 
@@ -63,18 +56,79 @@ klassische Batterien verzichten und stattdessen wiederaufladbare Batterien verwe
 Ein Betrieb durch Solarstrom ist bei diesem geringen Verbrauch auszuschließen, da zu viel Zusatz-Material
 benötigt werden würde.
 
-=== 4.1 Anwendungsfälle
+=== 4.1 Funktionale Anforderungen
+
+=== 4.1.1 Anwendungsfälle
 
 image::http://www.plantuml.com/plantuml/proxy?chache=n0&src=https://raw.githubusercontent.com/KonstantinFrank01/safer-pool/master/Assets/use-case-diagram.iuml[]
 
 <<<
 
-=== 4.2 Systemarchitektur
+==== 4.1.2 Use-Case 1 Überwachung zeitgesteuert verwalten
+
+:===
+
+Übergeordneter elementarere Geschäftsprozess : -
+
+Ziel des Use Cases : Ziel des Use Cases ist es, dass der Poolbenutzer die Überwachung des Pools auf bestimmte Zeit deaktivierten bzw. aktivieren kann.
+
+Umgebende Systemgrenze : -
+
+Vorbedingung : Es muss garantiert werden, dass das System diese Funktionen besitzt als auch, dass diese funktionieren
+
+Nachbedingung bei erfolgreicher Ausführung : Es muss sicher gestellt werden, dass der Benutzer mit dem System kommunizieren kann.
+
+Beschreibung : Der Benutzer kann die Überwachung verwalten (aktivieren, deaktivieren)
+
+Beteiligte Nutzer : Poolbenutzer, Administrator
+
+Auslösendes Ereignis : Das Ereignis wird ausgelöst sobald der Benutzer die Eingabe bestätigt
+
+:===
+
+==== 4.1.3 Use-Case 2 Alarm auslösen
+
+:===
+
+Übergeordneter elementarere Geschäftsprozess : -
+
+Ziel des Use Cases : Ziel des Use Cases ist es einen visuellen als auch auditiven Alarm auszulösen
+
+Umgebende Systemgrenze : -
+
+Vorbedingung : Es muss garantiert werden, dass das Gerät eingeschaltet ist und funktioniert
+
+Nachbedingung bei erfolgreicher Ausführung : Es muss sicher gestellt werden, dass die Geräte zur Ausgabe der Warnsignale angeschlossen sind
+
+Beschreibung : Vom Administrator wird ein Alarm ausgegeben
+
+Beteiligte Nutzer : Administrator
+
+Auslösendes Ereignis : Das Ereignis wird ausgelöst sobald der Sensor zu stark veränderte Werte wahrnimmt
+
+:===
+
+
+=== 4.2 Nicht-funktionale Anforderungen
+
+Das System soll leicht zu bedienen und übersichtlich aufgebaut sein. Auch die App soll nur die wichtigsten Funktionen
+enthalten um dem User die Bedienung so leicht als möglich zu machen.
+
+Die Alarmierung des System soll je nach Poolgröße so schnell wie möglich erfolgen um die Personen in der Umgebung
+schnellstmöglich zu alarmieren.
+
+Die App zum Produkt soll in mehreren Sprachen verwendbar sein um diese nicht nur in den deutschsparchigen Ländern
+benutzen zu können.
+
+Das System muss gewährleisten, dass im Falle eines (bevorstehenden) Ausfalls man sofort in der Handyapp benachrichigt
+um diesen so schnell wie möglich beheben zu können. Außerdem sollen alle Daten vergangener Alarme jederzeit nur für den
+jeweiligen Nutzer einsehbar sein.
+
+=== 4.3 Systemarchitektur
 
 image::systemarchitekturNetunus.jpg[Systemarchitektur]
 
-== 5. Ziele
-Das klare Ziel dieser Anwendung ist es Kinder vor dem Ertrinken zu schützen.
+== 5. Zielsetzung
+Das klare Ziel dieser Anwendung ist es Kinder sowie Haustiere vor Badeunfällen zu bewahren.
 Wie schon erwähnt soll das System möglichst nachhaltig betrieben werden.
-Es ist noch keine Produktreife geplant. Vorerst wird eine Webseite statt einer
-MobileApp entwickelt.
+Es soll eine App zur noch schneller Benachrichtgung und angenehmerer Benutzung des Systems entwickelt werden.
