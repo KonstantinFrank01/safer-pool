@@ -1,12 +1,10 @@
 @startuml
 left to right direction
-actor Aufsichtsperson
-actor PoolSaver
+actor Poolbenutzer
+actor Administrator
 rectangle NETUNUS {
-    Aufsichtsperson -- (schwimmen gehen)
-    Aufsichtsperson -- (Kind in Sicherheit wissen)
-    (Aufsichtsperson alarmieren) -- PoolSaver
-    (Pool überwachen) -- PoolSaver
-    (Überwachung des Microcontrollers) -- PoolSaver
+    Poolbenutzer -- (Überwachung zeitgesteuert deaktivieren)
+    (Überwachung zeitgesteuert deaktivieren) <|-- (Überwachung aktiverien/verwalten/deaktivieren)
+    (Alarm auslösen) -- Administrator
 }
 @enduml
