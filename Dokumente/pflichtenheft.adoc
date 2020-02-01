@@ -68,9 +68,9 @@ image::http://www.plantuml.com/plantuml/proxy?chache=n0&src=https://raw.githubus
 
 :===
 
-Übergeordneter elementarere Geschäftsprozess : -
+Übergeordneter elementarer Geschäftsprozess : -
 
-Ziel des Use Cases : Ziel des Use Cases ist es, dass der Poolbenutzer die Überwachung des Pools auf bestimmte Zeit deaktivierten bzw. aktivieren kann.
+Ziel des Use Cases : Ziel des Use Cases ist es, dass der Poolbenutzer die Überwachung des Pools auf bestimmte Zeit deaktivieren bzw. aktivieren kann.
 
 Umgebende Systemgrenze :
 
@@ -90,7 +90,7 @@ Auslösendes Ereignis : Das Ereignis wird ausgelöst sobald der Benutzer die Ein
 
 :===
 
-Übergeordneter elementarere Geschäftsprozess : -
+Übergeordneter elementarer Geschäftsprozess : -
 
 Ziel des Use Cases : Ziel des Use Cases ist es einen visuellen als auch auditiven Alarm auszulösen
 
