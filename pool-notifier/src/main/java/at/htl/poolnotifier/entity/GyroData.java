@@ -3,10 +3,18 @@ package at.htl.poolnotifier.entity;
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.time.LocalDateTime;
 
 @Entity
-public class GyroData extends PanacheEntity {
+public class GyroData {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     public double x;
     public double y;
     public double z;
@@ -19,6 +27,14 @@ public class GyroData extends PanacheEntity {
         this.z = z;
         this.location = location;
         this.notificationTime = LocalDateTime.now();
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public double getX() {
