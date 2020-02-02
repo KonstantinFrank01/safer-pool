@@ -1,10 +1,20 @@
 package at.htl.poolnotifier.repository;
 
 import at.htl.poolnotifier.entity.GyroData;
-import io.quarkus.hibernate.orm.panache.PanacheRepository;
 
 import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
+import javax.persistence.EntityManager;
+import javax.transaction.Transactional;
 
 @ApplicationScoped
-public class GyroDataRepository implements PanacheRepository<GyroData> {
+public class GyroDataRepository {
+
+    @Inject
+    EntityManager em;
+
+    @Transactional
+    public GyroData persistData(GyroData gyroData) {
+        return em.merge(gyroData);
+    }
 }
