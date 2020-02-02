@@ -29,6 +29,9 @@ public class GyroData {
         this.notificationTime = LocalDateTime.now();
     }
 
+    public GyroData() {
+    }
+
     public Long getId() {
         return id;
     }
