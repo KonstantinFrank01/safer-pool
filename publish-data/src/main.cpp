@@ -14,8 +14,6 @@
 #include <Wire.h>
 
 #include <string.h>
-//#include <iomanip>
-//#include <string>
 
 #include <stdio.h>
 
@@ -146,19 +144,21 @@ void setup() {
 void loop() {
   double Ax, Ay, Az, T, Gx, Gy, Gz;
   Read_RawValue(MPU6050SlaveAddress, MPU6050_REGISTER_ACCEL_XOUT_H);
-  //divide each with their sensitivity scale factor
-  Ax = (double)AccelX/AccelScaleFactor;
-  Ay = (double)AccelY/AccelScaleFactor;
-  Az = (double)AccelZ/AccelScaleFactor;
-  T = (double)Temperature/340+36.53; //temperature formula
-  Gx = (double)GyroX/GyroScaleFactor;
-  Gy = (double)GyroY/GyroScaleFactor;
-  Gz = (double)GyroZ/GyroScaleFactor;
-
-  char arrX[10];
+  /*char arrX[10];
   sprintf(arrX, "%f", (double)GyroX);
-  const char* gyroXData = &arrX[0];
+  const char* gyroXData = &arrX[0];*/
 
+  double x = (double) GyroX;
+  double y = (double) GyroY;
+  double z = (double) GyroZ;
+  const char fmt[] = "{\"x\":%f,\"y\":%f,\"z\":%f}";
+  int size = snprintf(0,0,fmt,x, y, z);
+  if (size < 0) {
+    /* handle error */
+  }
+  char json[size+1];
+  sprintf(json, fmt, x, y, z);
+  const char* payload = &json[0];
   // put your main code here, to run repeatedly:
   // pubclient.publish("iot/demo", "12345");
   if (!client.connected()) {
@@ -168,7 +168,7 @@ void loop() {
 
   client.loop();
   Serial.println(client.connected());
-  client.publish("esptest", gyroXData);
+  client.publish("pool", payload);
   //client.publish("esptest", gyroX);
 }
 
