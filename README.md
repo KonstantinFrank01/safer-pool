@@ -1,23 +1,26 @@
 # safer-pool
 
-Ergebnis dieses Projektes soll ein System sein, mit dessen Hilfe aufbeaufsichtigte Kinder vor dem Ertrinken gerettet werden sollen.
-Angenommen ein Kleinkind fällt unbeaufsichtigt in das Wasser so erkennt dieses System, dass
-Wellen erzeugt wurden und gibt ein audiovisuelles Warnsignal? von sich um die Aufsichtsperson
-darauf aufmerksam zu machen, damit das Kind so schnell wie möglich gerettet werden kann.
+## Ausgangssituation
+Im Jahr 2018 wurden etwas mehr als 85.000 Kinder in Österreich geboren. Vor allem im Sommer spielen die Kinder, wenn möglich draußen in der Sonne. In Österreich gibt es immer mehr Haushalte mit einem Swimming-Pool im Garten. Laut der letzten Auswertung des Landes Oberösterreich gibt es in etwa 61.000 Pools in Oberösterreich, jedoch kann aktuell mit einer höheren Zahl gerechnet werden da die Zahl stetig steigt. Viele Familien genießen ihre heißen Sommertage gemeinsam am Pool und erfreuen sich an der Abkühlung im Nass.
 
-Man sollte die Applikation einfach für eine gewisse Zeitdauer deaktivieren können, wenn man
-bewusst schwimmen gehen möchte. Nebenbedingungen wie ein Stromausfall, Sensorausfall etc.
-sollen ebenso erkannt werden.
-Das aktuell geplante System tastet sich vorerst nur an einen Prototypen heran. Es sollte möglichst
-ausfallsicher und einfach zu installieren sein. Wünschenswert wäre, wenn die Stromzufuhr
-möglichst nachhaltig wäre, daher wollen wir auf klassische Batterien verzichten und stattdessen
-wiederaufladbare Batterien verwenden. Ein Betrieb durch Solarstrom ist bei diesem geringen
-Verbrauch auszuschließen, da zu viel Zusatz-Material benötigt werden würde.
+## Ist-Sitation
+Es ist fast unmöglich Kinder lückenlos zu beaufsichtigen, da einen jeder noch so kleine Umstand ablenken kann. Beispiele für solche Ablenkungen wären ein Anruf oder auch ein kurzer Gang ins Haus, um etwas zu holen.
+
+## Problem
+Auch wenn die Zeit, in der die Kinder unbeaufsichtigt sind, noch so kurz ist kann es dadurch sehr schnell zu Badeunfällen kommen.
+
+## Aufgabenstellung 
+Es ist ein System zu entwickeln, dass Objekte detektiert, die in den Pool fallen. Das müssen in erster Linie nicht nur Kleinkinder, sondern können auch Haustiere oder ein Ball, mit dem das Kind gerade spielt sein. Sobald solch eine Detektion durch das System erfolgt soll sowohl ein auditives wie auch visuelles Signal abgegeben werden.
+
+Man sollte die Detektion einfach für eine gewisse Zeitdauer deaktivieren können, wenn man bewusst schwimmen gehen möchte. Nebenbedingungen wie ein Stromausfall, Sensorausfall etc. sollen ebenso erkannt werden.
+
+Das aktuell geplante System tastet sich vorerst nur an einen Prototypen heran. Es sollte möglichst ausfallsicher und einfach zu installieren sein. Wünschenswert wäre, wenn die Stromzufuhr möglichst nachhaltig wäre, daher wollen wir auf klassische Batterien verzichten und stattdessen wiederaufladbare Batterien verwenden. Ein Betrieb durch Solarstrom ist bei diesem geringen Verbrauch auszuschließen, da zu viel Zusatz-Material benötigt werden würde.
+
+## Anwendungsfall-Diagramm
+![Use-Case-Diagramm](https://raw.githubusercontent.com/KonstantinFrank01/safer-pool/master/Assets/use_case_diagram.png)
 
 ## Systemarchitektur
-
 ![Systemarchitektur](https://raw.githubusercontent.com/KonstantinFrank01/safer-pool/master/Assets/systemarchitekturNetunus.jpg)
 
-## Use-Case-Diagramm
-
-![Use-Case-Diagramm](https://raw.githubusercontent.com/KonstantinFrank01/safer-pool/master/Assets/use_case_diagram.png)
+## Zielsetzung
+Das klare Ziel dieser Anwendung ist es Kinder sowie Haustiere vor Badeunfällen zu bewahren. Wie schon erwähnt soll das System möglichst nachhaltig betrieben werden. Es soll eine App zur noch schnelleren Benachrichtigung und angenehmerer Benutzung des Systems entwickelt werden.
