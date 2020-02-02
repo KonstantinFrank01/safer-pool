@@ -1,7 +1,7 @@
 package at.htl.poolnotifier.entity;
 
-import io.quarkus.hibernate.orm.panache.PanacheEntity;
-
+import javax.json.bind.Jsonb;
+import javax.json.bind.JsonbBuilder;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -75,5 +75,11 @@ public class GyroData {
 
     public void setNotificationTime(LocalDateTime notificationTime) {
         this.notificationTime = notificationTime;
+    }
+
+    @Override
+    public String toString() {
+        Jsonb jsonb = JsonbBuilder.create();
+        return jsonb.toJson(this);
     }
 }
