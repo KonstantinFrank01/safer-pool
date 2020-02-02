@@ -2,8 +2,10 @@ package at.htl.poolnotifier.entity;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
 
+import javax.persistence.Entity;
 import java.time.LocalDateTime;
 
+@Entity
 public class GyroData extends PanacheEntity {
     public double x;
     public double y;
