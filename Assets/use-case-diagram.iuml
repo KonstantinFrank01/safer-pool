@@ -4,7 +4,7 @@ actor Poolbenutzer
 actor Administrator
 rectangle NETUNUS {
     Poolbenutzer -- (Überwachung zeitgesteuert deaktivieren)
-    (Überwachung zeitgesteuert deaktivieren) <|-- (Überwachung aktiverien/verwalten/deaktivieren)
+    (Überwachung zeitgesteuert deaktivieren) <.. (Überwachung aktivieren/verwalten/deaktivieren)
     (Alarm auslösen) -- Administrator
 }
 @enduml

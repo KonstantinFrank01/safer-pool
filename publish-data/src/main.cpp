@@ -159,29 +159,6 @@ void loop() {
   sprintf(arrX, "%f", (double)GyroX);
   const char* gyroXData = &arrX[0];
 
-  char arrY[10];
-  sprintf(arrY, "%f", (double)GyroY);
-  const char* gyroYData = &arrY[0];
-
-  char arrZ[10];
-  sprintf(arrY, "%f", (double)GyroZ);
-  const char* gyroZData = &arrZ[0];    
-
-  /*ostringstream s;
-  s << Gx;
-  string output = s.str();
-  gyroX = output.c_str();
-  cout << gyroX;*/
-
-  /*char x[50];
-  gyroX = sprintf(x, "%13.5f", Gx);*/
-
-  /*std::ostringstream strs;
-  strs << Gx;
-  std::string str = strs.str();
-  gyroX = str.c_str();*/
-
-
   // put your main code here, to run repeatedly:
   // pubclient.publish("iot/demo", "12345");
   if (!client.connected()) {
