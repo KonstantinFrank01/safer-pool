@@ -156,5 +156,5 @@ void loop() {
   client.loop();
   Serial.println(client.connected());
   client.publish("pool", payload);
+  delay(500);
 }
-
