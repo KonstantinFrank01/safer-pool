@@ -2,13 +2,16 @@ package at.htl.poolnotifier.entity;
 
 import javax.json.bind.Jsonb;
 import javax.json.bind.JsonbBuilder;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
+@NamedQueries({
+        @NamedQuery(
+                name ="GyroData.getAllData",
+                query = "select gd from GyroData gd order by gd.id desc "
+        )
+})
 public class GyroData {
 
     @Id
