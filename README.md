@@ -16,11 +16,11 @@ Man sollte die Detektion einfach für eine gewisse Zeitdauer deaktivieren könne
 
 Das aktuell geplante System tastet sich vorerst nur an einen Prototypen heran. Es sollte möglichst ausfallsicher und einfach zu installieren sein. Wünschenswert wäre, wenn die Stromzufuhr möglichst nachhaltig wäre, daher wollen wir auf klassische Batterien verzichten und stattdessen wiederaufladbare Batterien verwenden. Ein Betrieb durch Solarstrom ist bei diesem geringen Verbrauch auszuschließen, da zu viel Zusatz-Material benötigt werden würde.
 
-## Anwendungsfall-Diagramm
+## Anwendungsfälle
 ![Use-Case-Diagramm](https://raw.githubusercontent.com/KonstantinFrank01/safer-pool/master/Assets/use_case_diagram.png)
 
 ## Systemarchitektur
-![Systemarchitektur](https://raw.githubusercontent.com/KonstantinFrank01/safer-pool/master/Assets/systemarchitekturNetunus.jpg)
+![Systemarchitektur](https://raw.githubusercontent.com/KonstantinFrank01/safer-pool/master/Assets/systemarchitektur.jpg)
 
 ## Zielsetzung
 Das klare Ziel dieser Anwendung ist es Kinder sowie Haustiere vor Badeunfällen zu bewahren. Wie schon erwähnt soll das System möglichst nachhaltig betrieben werden. Es soll eine App zur noch schnelleren Benachrichtigung und angenehmerer Benutzung des Systems entwickelt werden.

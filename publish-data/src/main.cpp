@@ -1,4 +1,3 @@
-//#include <HttpServer.h>
 #include <PubSubClient.h>
 #include <NodeTime.h>
 #include <NodeConfig.h>
@@ -6,7 +5,6 @@
 #include <Logger.h>
 #include <Node.h>
 #include <Sensor.h>
-// #include <WifiStation.h>
 #include <Actor.h>
 #include <ESP8266WiFi.h>
 
@@ -14,8 +12,6 @@
 #include <Wire.h>
 
 #include <string.h>
-//#include <iomanip>
-//#include <string>
 
 #include <stdio.h>
 
@@ -88,7 +84,6 @@ void MPU6050_Init(){
 
 const char* ssid = "hotsp";
 const char* pwd = "passme001";
-const char* gyroX;
 
 WiFiClient espClient;
 PubSubClient client;
@@ -120,7 +115,6 @@ void reconnect() {
     clientId += String(random(0xffff), HEX);
     if (client.connect(clientId.c_str())) {
       Serial.println("connected");
-      //client.publish("esptest", "hi");
     } else {
       Serial.print("failed, rc=");
       Serial.print(client.state());
@@ -137,38 +131,30 @@ void setup() {
   MPU6050_Init();
   setup_wifi();
   client.setServer("test.mosquitto.org", 1883);
-  //client.setServer("10.0.0.90", 1883);
   client.setClient(espClient);
-  //client.connect("someid12345");
-  // MqttClient.subscribeToBroker();
 }
 
 void loop() {
-  double Ax, Ay, Az, T, Gx, Gy, Gz;
   Read_RawValue(MPU6050SlaveAddress, MPU6050_REGISTER_ACCEL_XOUT_H);
-  //divide each with their sensitivity scale factor
-  Ax = (double)AccelX/AccelScaleFactor;
-  Ay = (double)AccelY/AccelScaleFactor;
-  Az = (double)AccelZ/AccelScaleFactor;
-  T = (double)Temperature/340+36.53; //temperature formula
-  Gx = (double)GyroX/GyroScaleFactor;
-  Gy = (double)GyroY/GyroScaleFactor;
-  Gz = (double)GyroZ/GyroScaleFactor;
 
-  char arrX[10];
-  sprintf(arrX, "%f", (double)GyroX);
-  const char* gyroXData = &arrX[0];
-
+  double x = (double) GyroX;
+  double y = (double) GyroY;
+  double z = (double) GyroZ;
+  const char fmt[] = "{\"x\":%f,\"y\":%f,\"z\":%f}";
+  int size = snprintf(0,0,fmt,x, y, z);
+  if (size < 0) {
+    /* handle error */
+  }
+  char json[size+1];
+  sprintf(json, fmt, x, y, z);
+  const char* payload = &json[0];
   // put your main code here, to run repeatedly:
-  // pubclient.publish("iot/demo", "12345");
   if (!client.connected()) {
-    //client.connect("someid12345");
     reconnect();
   }
 
   client.loop();
   Serial.println(client.connected());
-  client.publish("esptest", gyroXData);
-  //client.publish("esptest", gyroX);
+  client.publish("pool", payload);
+  delay(500);
 }
-
