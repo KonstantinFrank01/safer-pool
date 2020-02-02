@@ -12,6 +12,9 @@ import javax.inject.Inject;
 import javax.json.bind.Jsonb;
 import javax.json.bind.JsonbBuilder;
 import javax.json.bind.JsonbException;
+import java.time.LocalDateTime;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.CompletionStage;
 
 @ApplicationScoped
 public class GyroService {
@@ -26,15 +29,22 @@ public class GyroService {
     }
 
     @Incoming("pool")
-    @Outgoing("pool-alarm")
+    @Outgoing("pool-process")
     public Publisher<GyroData> consumeData(byte[] rawData) {
         String data = new String(rawData);
         GyroData gyroData = null;
         try {
             gyroData = jsonb.fromJson(data, GyroData.class);
+            gyroData.setNotificationTime(LocalDateTime.now());
         } catch (JsonbException ignored) {
         }
 
         return ReactiveStreams.ofNullable(gyroData).buildRs();
+    }
+
+    @Incoming("pool-process")
+    @Outgoing("pool-alarm")
+    public CompletionStage<GyroData> persistData(GyroData gyroData) {
+        return CompletableFuture.supplyAsync(() -> gyroDataRepository.persistData(gyroData));
     }
 }
