@@ -9,9 +9,6 @@ Von Nina Holzinger, David Andraschko und Konstantin Frank <frank.konstantin01@gm
 :icons: font
 //:sectnums:    // Nummerierung der Überschriften / section numbering
 // Refs:
-:imagesdir: Assets
-//:sourcedir-code: src/main/java/at/htl/jdbcprimer
-//:sourcedir-test: src/test/java/at/htl/jdbcprimer
 :toc:
 
 Version: 1.0 +
@@ -60,7 +57,7 @@ benötigt werden würde.
 
 === 4.1.1 Anwendungsfälle
 
-image::http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/KonstantinFrank01/safer-pool/master/Assets/use-case-diagram.iuml[]
+image::http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/KonstantinFrank01/safer-pool/master/Assets/use-case-diagram.iuml[sdasdasdasd]
 
 <<<
 
@@ -82,7 +79,7 @@ jeweiligen Nutzer einsehbar sein.
 
 === 4.3 Systemarchitektur
 
-image::systemarchitektur.jpg[Systemarchitektur]
+image::../Assets/systemarchitektur.jpg[Systemarchitektur]
 
 == 5. Zielsetzung
 Das klare Ziel dieser Anwendung ist es Kinder sowie Haustiere vor Badeunfällen zu bewahren.
