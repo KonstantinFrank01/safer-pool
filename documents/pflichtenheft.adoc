@@ -9,7 +9,7 @@ Von Nina Holzinger, David Andraschko und Konstantin Frank <frank.konstantin01@gm
 :icons: font
 //:sectnums:    // Nummerierung der Überschriften / section numbering
 // Refs:
-//:imagesdir: assets
+:imagesdir: Assets
 //:sourcedir-code: src/main/java/at/htl/jdbcprimer
 //:sourcedir-test: src/test/java/at/htl/jdbcprimer
 :toc:
@@ -40,7 +40,7 @@ Auch wenn die Zeit, in der die Kinder unbeaufsichtigt sind, noch so kurz ist kan
 Badeunfällen kommen.
 
 == 4. Aufgabenstellung
-Es ist ein System zu entwickeln, dass Objekte detektiert, die in den Pool fallen. Das müssen in erster Linie nicht nur
+Es ist ein System zu entwickeln, das Objekte detektiert, die in den Pool fallen. Das müssen in erster Linie nicht nur
 Kleinkinder, sondern können auch Haustiere oder ein Ball, mit dem das Kind gerade spielt sein.
 Sobald solch eine Detektion durch das System erfolgt soll sowohl ein auditives wie auch visuelles Signal abgegeben
 werden.
@@ -60,53 +60,9 @@ benötigt werden würde.
 
 === 4.1.1 Anwendungsfälle
 
-image::http://www.plantuml.com/plantuml/proxy?chache=n0&src=https://raw.githubusercontent.com/KonstantinFrank01/safer-pool/master/Assets/use-case-diagram.iuml[]
+image::http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/KonstantinFrank01/safer-pool/master/Assets/use-case-diagram.iuml[]
 
 <<<
-
-==== 4.1.2 Use-Case 1 Überwachung zeitgesteuert verwalten
-
-:===
-
-Übergeordneter elementarer Geschäftsprozess : -
-
-Ziel des Use Cases : Ziel des Use Cases ist es, dass der Poolbenutzer die Überwachung des Pools auf bestimmte Zeit deaktivieren bzw. aktivieren kann.
-
-Umgebende Systemgrenze :
-
-Vorbedingung : Es muss garantiert werden, dass das System diese Funktionen besitzt als auch, dass diese funktionieren
-
-Nachbedingung bei erfolgreicher Ausführung : Es muss sichergestellt werden, dass der Benutzer mit dem System kommunizieren kann.
-
-Beschreibung : Der Benutzer kann die Überwachung verwalten (aktivieren, deaktivieren)
-
-Beteiligte Nutzer : Poolbenutzer, Administrator
-
-Auslösendes Ereignis : Das Ereignis wird ausgelöst sobald der Benutzer die Eingabe bestätigt
-
-:===
-
-==== 4.1.3 Use-Case 2 Alarm auslösen
-
-:===
-
-Übergeordneter elementarer Geschäftsprozess : -
-
-Ziel des Use Cases : Ziel des Use Cases ist es einen visuellen als auch auditiven Alarm auszulösen
-
-Umgebende Systemgrenze : -
-
-Vorbedingung : Es muss garantiert werden, dass das Gerät eingeschaltet ist und funktioniert
-
-Nachbedingung bei erfolgreicher Ausführung : Es muss sichergestellt werden, dass die Geräte zur Ausgabe der Warnsignale angeschlossen sind
-
-Beschreibung : Vom Administrator wird ein Alarm ausgegeben
-
-Beteiligte Nutzer : Administrator
-
-Auslösendes Ereignis : Das Ereignis wird ausgelöst sobald der Sensor zu stark veränderte Werte wahrnimmt
-
-:===
 
 
 === 4.2 Nicht-funktionale Anforderungen
@@ -126,7 +82,7 @@ jeweiligen Nutzer einsehbar sein.
 
 === 4.3 Systemarchitektur
 
-image::systemarchitekturNetunus.jpg[Systemarchitektur]
+image::systemarchitektur.jpg[Systemarchitektur]
 
 == 5. Zielsetzung
 Das klare Ziel dieser Anwendung ist es Kinder sowie Haustiere vor Badeunfällen zu bewahren.
