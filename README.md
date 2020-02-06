@@ -22,5 +22,8 @@ Das aktuell geplante System tastet sich vorerst nur an einen Prototypen heran. E
 ## Systemarchitektur
 ![Systemarchitektur](https://raw.githubusercontent.com/KonstantinFrank01/safer-pool/master/Assets/systemarchitektur.jpg)
 
+## Youtrack Diagramm
+![Youtrack-Diagramm](https://raw.githubusercontent.com/KonstantinFrank01/safer-pool/master/Assets/youtrack-diagram-netunus.png)
+
 ## Zielsetzung
 Das klare Ziel dieser Anwendung ist es Kinder sowie Haustiere vor Badeunfällen zu bewahren. Wie schon erwähnt wird das System möglichst nachhaltig betrieben werden. Es wird ebenfalls eine App zur noch schnelleren Benachrichtigung und angenehmerer Benutzung des Systems entwickelt werden.
