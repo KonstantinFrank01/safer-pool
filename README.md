@@ -15,12 +15,16 @@ Auch wenn die Zeit, in der die Kinder unbeaufsichtigt sind, noch so kurz ist, ka
 Badeunfällen kommen.
 
 ## Aufgabenstellung 
-Es ist ein System zu entwickeln, dass Objekte detektiert, die in den Pool fallen. Das müssen in erster Linie nicht nur Kleinkinder, sondern können auch Haustiere oder ein Ball, mit dem das Kind gerade spielt sein. Sobald solch eine Detektion durch das System erfolgt wird sowohl ein auditives wie auch visuelles Signal abgegeben werden.
+Es ist ein System zu entwickeln, dass Objekte detektiert, die in den Pool fallen. Das müssen in erster Linie 
+nicht nur Kleinkinder, sondern können auch Haustiere oder ein Ball, mit dem das Kind gerade spielt, sein. Sobald 
+solch eine Detektion durch das System erfolgt, wird sowohl ein auditives wie auch visuelles Signal abgegeben.
 
-Die Detektion kann auch für eine gewisse Zeitdauer deaktiviert werden, wen man bewusst schwimmen gehen möchte. 
+Die Detektion kann auch für eine gewisse Zeitdauer deaktiviert werden, wenn man bewusst schwimmen gehen möchte. 
 Nebenbedingungen wie ein Stromausfall, Sensorausfall etc. werden ebenso erkannt.
 
-Das aktuell geplante System tastet sich vorerst nur an einen Prototypen heran. Es sollte möglichst ausfallsicher und einfach zu installieren sein. Wünschenswert wäre, wenn die Stromzufuhr möglichst nachhaltig wäre, daher wollen wir auf klassische Batterien verzichten und stattdessen wiederaufladbare Batterien verwenden. Ein Betrieb durch Solarstrom ist bei diesem geringen Verbrauch auszuschließen, da man zu viel Zusatz-Material benötigt.
+Das aktuell geplante System tastet sich vorerst nur an einen Prototypen heran. Es wird möglichst ausfallsicher 
+und 
+einfach zu installieren sein. Wünschenswert wäre, wenn die Stromzufuhr möglichst nachhaltig wäre, daher wollen wir auf klassische Batterien verzichten und stattdessen wiederaufladbare Batterien verwenden. Ein Betrieb durch Solarstrom ist bei diesem geringen Verbrauch auszuschließen, da man zu viel Zusatz-Material benötigt.
 
 ## Anwendungsfälle
 ![Use-Case-Diagramm](https://raw.githubusercontent.com/KonstantinFrank01/safer-pool/master/Assets/use_case_diagram.png)
