@@ -8,8 +8,6 @@ rectangle NETUNUS{
     Poolbesitzer -- (Deaktiviert zeitgesteuert das Überwachungssystem)
     Poolbesitzer -- (Betrachtet vergangene Auslöser)
     (Bekommt Benachrichtigung) .> (Auslösen des Alarms) : <<extends>>
-    (Deaktiviert Alarm) -- Poolbenutzer
-    (Deaktiviert zeitgesteuert das Überwachungssystem) -- Poolbenutzer
     (Auslösen des Alarms) -- Poolbenutzer
 }
 @enduml
