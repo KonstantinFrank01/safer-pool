@@ -1,7 +1,7 @@
 @startuml
 left to right direction
 actor Poolbesitzer
-actor Poolsafer
+actor Poolbenutzer
 rectangle NETUNUS{
     Poolbesitzer -- (Bekommt Benachrichtigung)
     Poolbesitzer -- (Deaktiviert Alarm)
