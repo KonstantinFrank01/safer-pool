@@ -48,7 +48,7 @@ Das aktuell geplante System tastet sich vorerst nur an einen Prototypen heran. E
 
 === 4.1.1 Anwendungsfälle
 
-image::http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/KonstantinFrank01/safer-pool/master/Assets/use-case-diagram.iuml[sdasdasdasd]
+image::http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/KonstantinFrank01/safer-pool/master/Assets/use-case-diagram.iuml[Use-Case-Diagram]
 
 <<<
 
