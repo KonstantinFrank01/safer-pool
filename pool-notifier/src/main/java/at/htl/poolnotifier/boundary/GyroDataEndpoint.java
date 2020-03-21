@@ -34,7 +34,6 @@ public class GyroDataEndpoint {
         return Response.ok(gyroDataRepository.getAllData(limit)).build();
     }
 
-
     @GET
     @Path("/stream")
     @Produces(MediaType.SERVER_SENT_EVENTS)

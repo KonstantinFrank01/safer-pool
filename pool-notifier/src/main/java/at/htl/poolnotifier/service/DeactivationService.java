@@ -17,11 +17,11 @@ public class DeactivationService {
         isDeactivated = deactivated;
     }
 
-    public void deactivate(int seconds){
+    public void deactivate(int seconds) {
         Timer timer = new Timer();
         isDeactivated = true;
 
-        timer.schedule(new TimerTask(){
+        timer.schedule(new TimerTask() {
             @Override
             public void run() {
                 isDeactivated = false;

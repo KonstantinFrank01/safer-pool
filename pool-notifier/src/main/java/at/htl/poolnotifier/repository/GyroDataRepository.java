@@ -20,13 +20,13 @@ public class GyroDataRepository {
     }
 
     public List<GyroData> getAllData(int limit) {
-        return em.createNamedQuery("GyroData.getAllData",GyroData.class)
+        return em.createNamedQuery("GyroData.getAllData", GyroData.class)
                 .setMaxResults(limit)
                 .getResultList();
     }
 
     public List<GyroData> getAllData() {
-        return em.createNamedQuery("GyroData.getAllData",GyroData.class)
+        return em.createNamedQuery("GyroData.getAllData", GyroData.class)
                 .getResultList();
     }
 }

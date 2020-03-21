@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 @Entity
 @NamedQueries({
         @NamedQuery(
-                name ="GyroData.getAllData",
+                name = "GyroData.getAllData",
                 query = "select gd from GyroData gd order by gd.id desc "
         )
 })
