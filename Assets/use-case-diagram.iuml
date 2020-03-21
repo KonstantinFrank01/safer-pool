@@ -1,18 +1,13 @@
 @startuml
 left to right direction
 actor Poolbesitzer
-actor Poolsafer
+actor Poolbenutzer
 rectangle NETUNUS{
     Poolbesitzer -- (Bekommt Benachrichtigung)
     Poolbesitzer -- (Deaktiviert Alarm)
     Poolbesitzer -- (Deaktiviert zeitgesteuert das Überwachungssystem)
     Poolbesitzer -- (Betrachtet vergangene Auslöser)
-    (Deaktiviert Alarm) .> (Auslösen des Alarms) : include
-    (Bekommt Benachrichtigung) -- Poolsafer
-    (Bekommt Benachrichtigung) .> (Auslösen des Alarms) : include
-    (Deaktiviert Alarm) -- Poolsafer
-    (Deaktiviert zeitgesteuert das Überwachungssystem) -- Poolsafer
-    (Betrachtet vergangene Auslöser) -- Poolsafer
-    (Auslösen des Alarms) -- Poolsafer
+    (Bekommt Benachrichtigung) .> (Auslösen des Alarms) : <<extends>>
+    (Auslösen des Alarms) -- Poolbenutzer
 }
 @enduml
