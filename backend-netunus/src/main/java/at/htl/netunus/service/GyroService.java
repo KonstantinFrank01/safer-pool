@@ -1,7 +1,7 @@
-package at.htl.poolnotifier.service;
+package at.htl.netunus.service;
 
-import at.htl.poolnotifier.entity.GyroData;
-import at.htl.poolnotifier.repository.GyroDataRepository;
+import at.htl.netunus.entity.GyroData;
+import at.htl.netunus.repository.GyroDataRepository;
 import io.smallrye.reactive.messaging.annotations.Broadcast;
 import io.smallrye.reactive.messaging.mqtt.ReceivingMqttMessage;
 import org.eclipse.microprofile.reactive.messaging.Incoming;

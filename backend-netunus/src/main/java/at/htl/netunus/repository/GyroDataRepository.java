@@ -1,6 +1,6 @@
-package at.htl.poolnotifier.repository;
+package at.htl.netunus.repository;
 
-import at.htl.poolnotifier.entity.GyroData;
+import at.htl.netunus.entity.GyroData;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;

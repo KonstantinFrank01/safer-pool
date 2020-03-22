@@ -1,4 +1,4 @@
-package at.htl.poolnotifier.service;
+package at.htl.netunus.service;
 
 import javax.enterprise.context.ApplicationScoped;
 import java.util.Timer;

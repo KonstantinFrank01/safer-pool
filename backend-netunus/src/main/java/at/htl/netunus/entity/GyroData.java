@@ -1,4 +1,4 @@
-package at.htl.poolnotifier.entity;
+package at.htl.netunus.entity;
 
 import javax.json.bind.Jsonb;
 import javax.json.bind.JsonbBuilder;

@@ -1,8 +1,8 @@
-package at.htl.poolnotifier.boundary;
+package at.htl.netunus.boundary;
 
-import at.htl.poolnotifier.entity.GyroData;
-import at.htl.poolnotifier.repository.GyroDataRepository;
-import at.htl.poolnotifier.service.DeactivationService;
+import at.htl.netunus.entity.GyroData;
+import at.htl.netunus.repository.GyroDataRepository;
+import at.htl.netunus.service.DeactivationService;
 import io.smallrye.reactive.messaging.annotations.Channel;
 import io.vertx.core.eventbus.Message;
 import org.reactivestreams.Publisher;
