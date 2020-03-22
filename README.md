@@ -27,13 +27,13 @@ und
 einfach zu installieren sein. Wünschenswert wäre, wenn die Stromzufuhr möglichst nachhaltig wäre, daher wollen wir auf klassische Batterien verzichten und stattdessen wiederaufladbare Batterien verwenden. Ein Betrieb durch Solarstrom ist bei diesem geringen Verbrauch auszuschließen, da man zu viel Zusatz-Material benötigt.
 
 ## Anwendungsfälle
-![Use-Case-Diagramm](https://raw.githubusercontent.com/KonstantinFrank01/safer-pool/master/Assets/use_case_diagram.png)
+![Use-Case-Diagramm](https://raw.githubusercontent.com/KonstantinFrank01/safer-pool/master/assets/use_case_diagram.png)
 
 ## Systemarchitektur
-![Systemarchitektur](https://raw.githubusercontent.com/KonstantinFrank01/safer-pool/master/Assets/systemarchitektur.jpg)
+![Systemarchitektur](https://raw.githubusercontent.com/KonstantinFrank01/safer-pool/master/assets/systemarchitektur.jpg)
 
 ## Youtrack Diagramm
-![Youtrack-Diagramm](https://raw.githubusercontent.com/KonstantinFrank01/safer-pool/master/Assets/youtrack-diagram-netunus.png)
+![Youtrack-Diagramm](https://raw.githubusercontent.com/KonstantinFrank01/safer-pool/master/assets/youtrack-diagram-netunus.png)
 
 ## Zielsetzung
 Das klare Ziel dieser Anwendung ist es Kinder sowie Haustiere vor Badeunfällen zu bewahren. Wie schon erwähnt wird das System möglichst nachhaltig betrieben werden. Es wird ebenfalls eine App zur noch schnelleren Benachrichtigung und angenehmerer Benutzung des Systems entwickelt werden.
