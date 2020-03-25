@@ -1,5 +1,14 @@
 # safer-pool
 
+## Our GitHub-Page for Documentation
+(https://konstantinfrank01.github.io/safer-pool-docs/)
+
+## Our GitHub-Repository for Documentation
+https://github.com/KonstantinFrank01/safer-pool-docs
+
+## Link to our YouTrack
+(https://vm81.htl-leonding.ac.at/agiles/99-174/100-836)
+
 ## Ausgangssituation
 Im Jahr 2018 wurden etwas mehr als 85.000 Kinder in Österreich geboren. Vor allem im Sommer spielen die Kinder, 
 wenn möglich draußen in der Sonne. In Österreich gibt es immer mehr Haushalte mit einem Swimming-pool im Garten. 
