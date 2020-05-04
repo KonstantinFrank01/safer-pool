@@ -34,6 +34,9 @@ public class GyroService {
         jsonb = JsonbBuilder.create();
     }
 
+
+
+    //Diese Methode überprüft ob ein gültiges Json mitgegeben wurde
     @Incoming("pool")
     @Outgoing("pool-alarm")
     @Broadcast
