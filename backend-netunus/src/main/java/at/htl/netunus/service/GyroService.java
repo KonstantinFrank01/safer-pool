@@ -51,6 +51,9 @@ public class GyroService {
         return ReactiveStreams.ofNullable(payload);
     }
 
+    //Diese Methode wird ausgeführt wenn die Methode consumeData fehlerfrei erfolgt ist
+    //Anschließend wird überprüft ob es sich bei den Daten um einen Auslöser handelt oder nicht
+    //Handelt es sich um einen Auslöser werden die Daten persistiert
     @Incoming("pool-alarm")
     public CompletionStage<Message<GyroData>> persistData(Message<GyroData> message) {
         GyroData gyroData = message.getPayload();
