@@ -17,6 +17,7 @@ public class DeactivationService {
         isDeactivated = deactivated;
     }
 
+    //Pausiert den Alarm für eine bestimmte, angegebene Zeit
     public void deactivate(int seconds) {
         Timer timer = new Timer();
         isDeactivated = true;
