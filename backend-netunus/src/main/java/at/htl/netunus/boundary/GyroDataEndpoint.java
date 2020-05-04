@@ -25,6 +25,8 @@ public class GyroDataEndpoint {
     @Channel("pool-alarm")
     Publisher<Message<GyroData>> alarmData;
 
+    //Diese Methode liefert, die bereits in die Datenbank persistierten Auslöser
+    //mittels einem QueryParam, limit, kann man die Anzahl, der anzuzeigenden Daten angeben
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response getAllData(@QueryParam("limit") Integer limit) {
@@ -34,6 +36,7 @@ public class GyroDataEndpoint {
         return Response.ok(gyroDataRepository.getAllData(limit)).build();
     }
 
+    //stream von gyroDaten die vom GyroSensor kommen
     @GET
     @Path("/stream")
     @Produces(MediaType.SERVER_SENT_EVENTS)
@@ -41,6 +44,7 @@ public class GyroDataEndpoint {
         return alarmData;
     }
 
+    //Mittels PUT Befehl und QueryParam kann der Alarm, für eine gewisse Zeit deaktiviert werden
     @PUT
     @Path("/deactivate")
     public Response setAlarmStatus(@QueryParam("duration") Integer duration) {
