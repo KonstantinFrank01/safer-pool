@@ -1,0 +1,42 @@
+<!--<button (click)="noAlarm()" class="btn btn-md my-0 ml-sm-2 btn-dark btn-outline-success" type="submit">Kein Alarm</button>
+<button (click)="alarm()" class="btn btn-md my-0 ml-sm-2 btn-dark btn-outline-success" type="submit">Alarm</button>-->
+
+<div class="ml-5 mt-5 col-xl-3">
+  <img src="/assets/logo.png" width="30%"/>
+</div>
+
+<div class="col-xl-12 text-center" *ngIf="isAlarm == true" id="alarmBox">
+  <img src="/assets/alarm.gif" width="20%"/>
+</div>
+
+
+<div  class="col-xl-12 text-center" *ngIf="isAlarm == false" id ="safeBox">
+  <img src="/assets/safe.png" width="20%">
+</div>
+
+<!--<p *ngFor="let g of gyroData">{{ g.x }}</p>-->
+<div class = "col-xl-12 text-center">
+
+<button type="button" class="btn btn-dark col-xl-2 mt-3" (click)='quitAlarm()'>Überwachung deaktivieren</button>
+<br>
+<button type="button" class="btn btn-dark col-xl-2 mt-3" (click)='startAlarm()'>Überwachung starten</button>
+<br>
+<input  class = "col-xl-1 mt-3" type="text" id="durationTime" [(ngModel)]="pauseTime" placeholder="Pause (Min)">
+  <br>
+<button type="button" class="btn btn-dark col-xl-2 mt-3" *ngIf="pauseTime != null" (click)='pauseAlarm()'>Überwachung pausieren</button>
+<br>
+
+
+</div>
+
+<div class = "col-xl-12 text-center mt-3"  *ngIf="help == true " >{{timeLeft}} Seconds Left....</div>
+<div class = "col-xl-12 text-center"  *ngIf="help == true && timeLeft > 59" >{{timeLeft / 60}} Minutes Left....</div>
+
+
+
+
+<!--<input type="text" id="durationTime" [(ngModel)]="durationTime">
+<button *ngIf="durationTime != null" (click)="pauseAlarm()"></button>-->
+<!--
+<p>{{timeLeft}} Seconds Left....</p>-->
+
