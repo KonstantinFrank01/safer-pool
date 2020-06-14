@@ -1,0 +1,26 @@
+version: "3"
+
+services:
+  db:
+    image: mariadb:10.3.22-bionic
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_RANDOM_ROOT_PASSWORD: "yes"
+      MYSQL_DATABASE: pool-notifier
+      MYSQL_USER: pool-notifier
+      MYSQL_PASSWORD: secret
+    volumes:
+      - ./mariadb:/var/lib/mysql
+
+  mosquitto:
+    image: eclipse-mosquitto:1.6.9
+    ports:
+      - 1883:1883
+
+  frontend:
+    image: nginx:1.18.0
+    ports:
+      - 80:80
+    volumes:
+      - ./src:/usr/share/nginx/html
