@@ -1,0 +1,35 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: netunus-mosquitto-service
+  labels:
+    netunus: mosquitto
+spec:
+  ports:
+    - port: 1883
+  selector:
+    netunus: mosquitto-deployment
+  type: LoadBalancer
+#  clusterIP: None
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: netunus-mosquitto-deployment
+  labels:
+    netunus: mosquitto-deployment
+spec:
+  selector:
+    matchLabels:
+      netunus: mosquitto
+  template:
+    metadata:
+      labels:
+        netunus: mosquitto
+    spec:
+      containers:
+      - image: eclipse-mosquitto:1.6.9
+        name: mosquitto
+        ports:
+        - containerPort: 1883
+          name: mosquitto
